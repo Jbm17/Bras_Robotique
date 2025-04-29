@@ -31,7 +31,7 @@ https://www.arduino.cc/en/software/
         position_initiale(); break;
     }
 ```
-# Explication
+**Traduction de la commande de haut-dessus**
 
 | **Action**                   | **Touche** |
 |------------------------------|------------|
@@ -44,7 +44,6 @@ https://www.arduino.cc/en/software/
 | Pince ← (Rot. gauche)         | r          |
 | Pince → (Rot. droite)         | R          |
 | Robot réinitialisé            | I          |
-| Arrêt la machine              | S          |
 | Pince fermée                  | o          |
 | Pince ouverte                 | O          |
 | Poignet Haut                  | m          |
