@@ -31,11 +31,30 @@ https://www.arduino.cc/en/software/
         position_initiale(); break;
     }
 ```
+# Explication
+
+| **Action**                   | **Touche** |
+|------------------------------|------------|
+| Épaule ↑                      | E          |
+| Épaule ↓                      | e          |
+| Base ←                        | B          |
+| Base →                        | b          |
+| Coude ↑                       | c          |
+| Coude ↓                       | C          |
+| Pince ← (Rot. gauche)         | r          |
+| Pince → (Rot. droite)         | R          |
+| Robot réinitialisé            | I          |
+| Arrêt la machine              | S          |
+| Pince fermée                  | o          |
+| Pince ouverte                 | O          |
+| Poignet Haut                  | m          |
+| Poignet Bas                   | M          |
+
 **Fonctionnalités :**
 
   `` Ce programme en C++ utilise Arduino qui permet de manipuler le robot Youpi du projet.``
   
-   ``Il vas ensuite traduire les commandes reçu et les éxécuter en temps réel.``
+   ``Il vas ensuite traduire les commandes reçu et les éxécuter en temps réel selon la touche utilisé.``
 
    
 # Résultat attendu : 
