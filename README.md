@@ -29,7 +29,7 @@ https://www.arduino.cc/en/software/
 
 **3.OBJECTIF**
 
-  `` Ce programme en C++ utilise Arduino qui permet de manipuler le robot Youpi du projet.Il vas ensuite traduire les commandes reçu et les éxécuter en temps réel selon la touche utilisé.``
+  ``Ce programme en C++ utilise Arduino qui permet de manipuler le robot Youpi du projet.Il vas ensuite traduire les commandes reçu et les éxécuter en temps réel selon la touche utilisé.``
    
 # Résultat attendu : 
 
@@ -38,4 +38,4 @@ https://www.arduino.cc/en/software/
 
 **4.Fonctionnalité**
 
-*Ce programme permet d'envoyé des commandes depuis le moniteur série vu dans la vidéo, qui fera ensuite une action éffectuer par le robot Youpi*
+``Ce programme permet d'envoyé des commandes depuis le moniteur série vu dans la vidéo, qui fera ensuite une action éffectuer par le robot Youpi.``
