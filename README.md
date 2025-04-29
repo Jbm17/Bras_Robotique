@@ -35,7 +35,6 @@ https://www.arduino.cc/en/software/
 
 [Capture vidéo du 2025-04-29 10-41-02.webm]( https://github.com/user-attachments/assets/0f3d6606-519f-418b-b2f3-31cb6ebe32f9)
 
-
-**4.Fonctionnalité**
+**4. Fonctionnalité**
 
 ``Ce programme permet d'envoyé des commandes depuis le moniteur série vu dans la vidéo, qui fera ensuite une action éffectuer par le robot Youpi.``
