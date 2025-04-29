@@ -1,0 +1,142 @@
+int analogInPin = A0;
+int autofeed = A1;
+int iniprinter = A2;
+int selectinput = A3;
+
+int sensorValue = 0;
+
+// Sorties moteur
+int bit_01 = 3;
+int bit_02 = 4;
+int bit_03 = 5;
+int bit_04 = 6;
+int bit_05 = 7;
+int bit_06 = 8;
+int bit_07 = 9;
+int bit_08 = 10;
+int STROBE = 13;
+
+// Mots moteurs
+const byte BASE = 0b000;
+const byte EPAULE_HAUT = 0b100;
+const byte EPAULE_BAS = 0b100;
+const byte COUDE_HAUT = 0b010;
+const byte COUDE_BAS = 0b010;
+const byte POIGNET_BAS = 0b110;
+const byte POIGNET_HAUT = 0b110;
+const byte ROTATION_POIGNET_GAUCHE = 0b001;
+const byte ROTATION_POIGNET_DROITE = 0b001;
+const byte PINCE_OUVERT = 0b101;
+const byte PINCE_FERMER = 0b101;
+
+void setup() {
+  for (int i = bit_01; i <= bit_08; i++) pinMode(i, OUTPUT);
+  pinMode(STROBE, INPUT);
+
+  pinMode(autofeed, OUTPUT); digitalWrite(autofeed, LOW);
+  pinMode(iniprinter, OUTPUT); digitalWrite(iniprinter, LOW);
+  pinMode(selectinput, OUTPUT); digitalWrite(selectinput, LOW);
+  pinMode(analogInPin, INPUT);
+
+  Serial.begin(9600);
+
+  if (digitalRead(STROBE) == LOW) {
+    // Init robot
+    set_Bits(0b11100010); // bits 01, 02, 03, 07 HIGH
+    delay(100);
+    set_Bits(0);          // reset tout
+    delay(400);
+  }
+}
+
+void loop() {
+  if (Serial.available()) {
+    char command = Serial.read();
+    Serial.println(command);  
+
+    switch (command) {
+      case 'b': sens_rotation(HIGH); moteur_mov(300, BASE); break;
+      case 'B': sens_rotation(LOW);  moteur_mov(300, BASE); break;
+      case 'e': sens_rotation(HIGH); moteur_mov(300, EPAULE_BAS); break;
+      case 'E': sens_rotation(LOW);  moteur_mov(300, EPAULE_HAUT); break;
+      case 'c': sens_rotation(HIGH); moteur_mov(300, COUDE_HAUT); break;
+      case 'C': sens_rotation(LOW);  moteur_mov(300, COUDE_BAS); break;
+      case 'm': sens_rotation(LOW);  moteur_mov(300, POIGNET_HAUT); break;
+      case 'M': sens_rotation(HIGH); moteur_mov(300, POIGNET_BAS); break;
+      case 'r': sens_rotation(HIGH); moteur_mov(300, ROTATION_POIGNET_GAUCHE); break;
+      case 'R': sens_rotation(LOW);  moteur_mov(300, ROTATION_POIGNET_DROITE); break;
+      case 'o': sens_rotation(HIGH); moteur_mov(300, PINCE_FERMER); break;
+      case 'O': sens_rotation(LOW);  moteur_mov(300, PINCE_OUVERT); break;      case '1':
+        position_initiale();
+        sens_rotation(LOW);  moteur_mov(1000, BASE);
+        sens_rotation(HIGH); moteur_mov(2000, BASE);
+        break;
+      case 'I':
+        position_initiale(); break;
+    }
+  }
+}
+
+// Exécute un mouvement moteur
+void moteur_mov(int degre, byte val) {
+  byte val_1 = (val & 0b100) ? HIGH : LOW;
+  byte val_2 = (val & 0b010) ? HIGH : LOW;
+  byte val_3 = (val & 0b001) ? HIGH : LOW;
+
+  if (digitalRead(STROBE) == LOW) {
+    for (int i = 0; i < degre; i++) {
+      digitalWrite(bit_01, val_1);
+      digitalWrite(bit_02, val_2);
+      digitalWrite(bit_03, val_3);
+      digitalWrite(bit_04, LOW);
+      digitalWrite(bit_05, LOW);
+      digitalWrite(bit_06, LOW);
+      digitalWrite(bit_07, HIGH);
+      digitalWrite(bit_08, LOW);
+      digitalWrite(bit_07, LOW);
+      delayMicroseconds(700);  // Plus rapide que delay(1)
+    }
+  }
+}
+
+void sens_rotation(int dir) {
+  if (digitalRead(STROBE) == HIGH) return;
+
+  set_Bits((dir << 0) | (dir << 1) | (dir << 2) |
+          (dir << 3) | (dir << 4) | (dir << 5));
+  digitalWrite(bit_07, LOW);
+  digitalWrite(bit_08, HIGH);
+  digitalWrite(bit_08, LOW);
+  delay(2);
+}
+
+// Retour en position initiale
+void position_initiale() {
+  sensorValue = analogRead(analogInPin);
+
+  if (sensorValue == 0) {
+    Serial.println("Pos init : 0");
+    while (analogRead(analogInPin) == 0) {
+      sens_rotation(LOW);
+      moteur_mov(100, BASE);
+    }
+  } else if (sensorValue >= 860) {
+    Serial.println("Pos init : 1023");
+    while (analogRead(analogInPin) >= 860) {
+      sens_rotation(HIGH);
+      moteur_mov(100, BASE);
+    }
+  }
+}
+
+// Fonction d’écriture rapide
+void set_Bits(byte pattern) {
+  digitalWrite(bit_01, (pattern >> 0) & 1);
+  digitalWrite(bit_02, (pattern >> 1) & 1);
+  digitalWrite(bit_03, (pattern >> 2) & 1);
+  digitalWrite(bit_04, (pattern >> 3) & 1);
+  digitalWrite(bit_05, (pattern >> 4) & 1);
+  digitalWrite(bit_06, (pattern >> 5) & 1);
+  digitalWrite(bit_07, (pattern >> 6) & 1);
+  digitalWrite(bit_08, (pattern >> 7) & 1);
+}
