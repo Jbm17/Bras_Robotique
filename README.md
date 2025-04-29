@@ -8,7 +8,7 @@
 
 https://www.arduino.cc/en/software/
 
-**Commandes :**
+2.**Les Commandes :**
 
 | **Action**                   | **Touche** |
 |------------------------------|------------|
@@ -26,7 +26,7 @@ https://www.arduino.cc/en/software/
 | Poignet Haut                  | m          |
 | Poignet Bas                   | M          |
 
-**Fonctionnalités :**
+3.**Fonctionnalités :**
 
   `` Ce programme en C++ utilise Arduino qui permet de manipuler le robot Youpi du projet.``
   
@@ -35,5 +35,4 @@ https://www.arduino.cc/en/software/
    
 # Résultat attendu : 
 
- [Capture vidéo du 2025-04-29 10-41-02.webm](https://github.com/user-attachments/assets/bbc1948a-a235-4c58-afcb-93c82bb5114f)
     
