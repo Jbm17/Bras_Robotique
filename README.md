@@ -2,13 +2,13 @@
 
 **Avant d'exécuter ce programme, assurez-vous que vous avez installé les éléments suivants :**
 
-**1.Arduino**
+**1. Arduino**
 
 *Voici le liens qui permettra d'installer l'application Arduino.*
 
 https://www.arduino.cc/en/software/
 
-**2.Les Commandes :**
+**2. Commandes :**
 
 | **Action**                   | **Touche** |
 |------------------------------|------------|
@@ -27,7 +27,7 @@ https://www.arduino.cc/en/software/
 | Poignet Bas                   | M          |
 
 
-**3.OBJECTIF**
+**3. OBJECTIF**
 
   ``Ce programme en C++ utilise Arduino qui permet de manipuler le robot Youpi du projet.Il vas ensuite traduire les commandes reçu et les éxécuter en temps réel selon la touche utilisé.``
    
