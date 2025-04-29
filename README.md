@@ -1,6 +1,6 @@
 # Bras_Robotique
 
-**Avant d'exécuter ce programme, assurez-vous que vous avez installé les éléments suivants :**
+**Avant d'exécuter ce programme, assurez-vous que vous avez installé l'éléments suivants :**
 
 **1. Arduino**
 
