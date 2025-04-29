@@ -35,5 +35,5 @@ https://www.arduino.cc/en/software/
    
 # Résultat attendu : 
 
-[Capture vidéo du 2025-04-29 10-41-02.webm]( file:///home/btsciel2/Vid%C3%A9os/Captures%20vid%C3%A9o/Capture%20vid%C3%A9o%20du%202025-04-29%2010-41-02.webm)
+[Capture vidéo du 2025-04-29 10-41-02.webm]( https://github.com/user-attachments/assets/0f3d6606-519f-418b-b2f3-31cb6ebe32f9)
    
