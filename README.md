@@ -10,21 +10,22 @@ https://www.arduino.cc/en/software/
 
 **2. Commandes :**
 
-| **Action**                   | **Touche** |
-|------------------------------|------------|
-| Épaule ↑                      | E          |
-| Épaule ↓                      | e          |
-| Base ←                        | B          |
-| Base →                        | b          |
-| Coude ↑                       | c          |
-| Coude ↓                       | C          |
-| Pince ← (Rot. gauche)         | r          |
-| Pince → (Rot. droite)         | R          |
-| Robot réinitialisé            | I          |
-| Pince fermée                  | o          |
-| Pince ouverte                 | O          |
-| Poignet Haut                  | m          |
-| Poignet Bas                   | M          |
+| **Action**                         | **Touche** |
+|-----------------------------------|------------|
+| Épaule ↓                          | E          |
+| Épaule ↑                          | e          |
+| Base ←                            | B          |
+| Base →                            | b          |
+| Coude ↑                           | C          |
+| Coude ↓                           | c          |
+| Pince ← (Rotation gauche)         | r          |
+| Pince → (Rotation droite)         | R          |
+| Robot réinitialisé                | I          |
+| Arrêt de la machine               | S          |
+| Pince fermée                      | o          |
+| Pince ouverte                     | O          |
+| Poignet Haut                      | m          |
+| Poignet Bas                       | M          |
 
 
 **3. OBJECTIF**
