@@ -55,12 +55,12 @@ void loop() {
     Serial.println(command);  
 
     switch (command) {
-      case 'b': sens_rotation(HIGH); moteur_mov(300, BASE); break;
-      case 'B': sens_rotation(LOW);  moteur_mov(300, BASE); break;
-      case 'e': sens_rotation(HIGH); moteur_mov(300, EPAULE_BAS); break;
-      case 'E': sens_rotation(LOW);  moteur_mov(300, EPAULE_HAUT); break;
-      case 'c': sens_rotation(HIGH); moteur_mov(300, COUDE_HAUT); break;
-      case 'C': sens_rotation(LOW);  moteur_mov(300, COUDE_BAS); break;
+      case 'B': sens_rotation(HIGH); moteur_mov(300, BASE); break;
+      case 'b': sens_rotation(LOW);  moteur_mov(300, BASE); break;
+      case 'E': sens_rotation(HIGH); moteur_mov(300, EPAULE_BAS); break;
+      case 'e': sens_rotation(LOW);  moteur_mov(300, EPAULE_HAUT); break;
+      case 'C': sens_rotation(HIGH); moteur_mov(300, COUDE_HAUT); break;
+      case 'c': sens_rotation(LOW);  moteur_mov(300, COUDE_BAS); break;
       case 'm': sens_rotation(LOW);  moteur_mov(300, POIGNET_HAUT); break;
       case 'M': sens_rotation(HIGH); moteur_mov(300, POIGNET_BAS); break;
       case 'r': sens_rotation(HIGH); moteur_mov(300, ROTATION_POIGNET_GAUCHE); break;
