@@ -66,13 +66,21 @@ void loop() {
       case 'r': sens_rotation(HIGH); moteur_mov(300, ROTATION_POIGNET_GAUCHE); break;
       case 'R': sens_rotation(LOW);  moteur_mov(300, ROTATION_POIGNET_DROITE); break;
       case 'o': sens_rotation(HIGH); moteur_mov(300, PINCE_FERMER); break;
-      case 'O': sens_rotation(LOW);  moteur_mov(300, PINCE_OUVERT); break;      case '1':
+      case 'O': sens_rotation(LOW);  moteur_mov(300, PINCE_OUVERT); break;
+      case '1':
         position_initiale();
         sens_rotation(LOW);  moteur_mov(1000, BASE);
         sens_rotation(HIGH); moteur_mov(2000, BASE);
         break;
       case 'I':
         position_initiale(); break;
+
+      case 'S':
+        Serial.println("Pause de 3 secondes...");
+        set_Bits(0);  // Met les moteurs à l’arrêt
+        delay(3000);  // Pause
+        Serial.println("Reprise");
+        break;
     }
   }
 }
@@ -103,7 +111,7 @@ void sens_rotation(int dir) {
   if (digitalRead(STROBE) == HIGH) return;
 
   set_Bits((dir << 0) | (dir << 1) | (dir << 2) |
-          (dir << 3) | (dir << 4) | (dir << 5));
+           (dir << 3) | (dir << 4) | (dir << 5));
   digitalWrite(bit_07, LOW);
   digitalWrite(bit_08, HIGH);
   digitalWrite(bit_08, LOW);
