@@ -26,3 +26,7 @@
 | Pince ouverte                     | O          |
 | Poignet Haut                      | m          |
 | Poignet Bas                       | M          |
+
+**3. OBJECTIF**
+
+  ``Ce programme en C++ permet d'avoir une interface utilisable sur QT afin de piloter le robot par USB et d'avoir une caméra fonctionelle afin de voir les mouvement du robot.``
