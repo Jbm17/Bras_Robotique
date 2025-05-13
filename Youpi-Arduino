@@ -67,11 +67,7 @@ void loop() {
       case 'R': sens_rotation(LOW);  moteur_mov(300, ROTATION_POIGNET_DROITE); break;
       case 'o': sens_rotation(HIGH); moteur_mov(300, PINCE_FERMER); break;
       case 'O': sens_rotation(LOW);  moteur_mov(300, PINCE_OUVERT); break;
-      case '1':
-        position_initiale();
-        sens_rotation(LOW);  moteur_mov(1000, BASE);
-        sens_rotation(HIGH); moteur_mov(2000, BASE);
-        break;
+
       case 'I':
         position_initiale(); break;
 
