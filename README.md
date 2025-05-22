@@ -61,4 +61,4 @@ Cette application permet de contrôler un bras robotique à distance en envoyant
 
 **3. OBJECTIF**
 
-  `Cette application Android permet d’envoyer des commandes au PC, qui les transmet ensuite au robot via une connexion USB. Elle offre une interface de contrôle du robot et permet également de visualiser en direct les mouvements grâce à la caméra.
+ ``L'objectif de cette application Android est de contrôler à distance un bras robotique. L'application envoie des commandes via TCP/IP au PC, qui les transmet ensuite au robot via une connexion USB. Cette application offre une interface conviviale permettant de piloter les mouvements du bras robotique, y compris les mouvements de la pince, de l'épaule, du coude, etc. Elle permet également de visualiser en direct les mouvements du robot grâce à la caméra intégrée.``
