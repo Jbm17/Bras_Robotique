@@ -2,17 +2,17 @@
 
 **Avant d'exécuter ce programme, assurez-vous que vous avez installé l'éléments suivants :**
 
-**1. Arduino**
+**1. Android Studio**
 
-*Voici le liens qui permettra d'installer l'application Arduino.*
+*Voici le liens qui permettra d'installer l'application Android Studio.*
 
-(https://www.arduino.cc/en/software)
+(https://developer.android.com/studio?hl=fr)
 
-**2. Qt**
+**3. Fonctionnalités de l’application Android :**
 
-*Voici le liens qui permettra d'installer l'application QT.*
+''Cette application permet de contrôler un bras robotique à distance en envoyant des commandes via TCP/IP à un PC. Vous pouvez effectuer divers mouvements du bras, de la pince, etc., directement depuis l'application.''
 
-**2. Commandes :**
+**3. Commandes :**
 
 | **Action**                         | **Touche** |
 |-----------------------------------|------------|
@@ -30,6 +30,30 @@
 | Pince ouverte                     | O          |
 | Poignet Haut                      | m          |
 | Poignet Bas                       | M          |
+
+**4. Configuration de l'application :**
+
+Configurer votre environnement Android Studio :
+
+Téléchargez et installez Android Studio.
+
+Ouvrez le projet dans Android Studio.
+
+Lancer l'application :
+
+Exécutez l'application sur votre appareil Android ou un émulateur.
+
+L'application sera prête à envoyer des commandes une fois lancée.
+
+Connecter à un réseau local :
+
+Assurez-vous que votre smartphone est connecté à un réseau Wi-Fi local.
+
+Utilisation de l'interface :
+
+L'application propose des boutons pour envoyer des commandes.
+
+En appuyant sur les touches, les commandes sont envoyées au PC via TCP/IP.
 
 **3. OBJECTIF**
 
