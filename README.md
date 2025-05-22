@@ -8,11 +8,11 @@
 
 (https://developer.android.com/studio)
 
-**2. Fonctionnalités de l’application Android **
+**2. Fonctionnalités de l’application Android**
 
 Cette application permet de contrôler un bras robotique à distance en envoyant des commandes via TCP/IP à un PC. Vous pouvez effectuer divers mouvements du bras, de la pince, etc., directement depuis l'application.
 
-**3. Commandes **
+**3. Commandes**
 
 | **Action**                         | **Touche** |
 |-----------------------------------|------------|
@@ -31,7 +31,7 @@ Cette application permet de contrôler un bras robotique à distance en envoyant
 | Poignet Haut                      | m          |
 | Poignet Bas                       | M          |
 
-**4. Configuration de l'application **
+**4. Configuration de l'application**
 
 ##### 1. Configurer votre environnement Android Studio
 
