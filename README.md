@@ -8,9 +8,9 @@
 
 (https://developer.android.com/studio?hl=fr)
 
-**3. Fonctionnalités de l’application Android :**
+**2. Fonctionnalités de l’application Android :**
 
-''Cette application permet de contrôler un bras robotique à distance en envoyant des commandes via TCP/IP à un PC. Vous pouvez effectuer divers mouvements du bras, de la pince, etc., directement depuis l'application.''
+Cette application permet de contrôler un bras robotique à distance en envoyant des commandes via TCP/IP à un PC. Vous pouvez effectuer divers mouvements du bras, de la pince, etc., directement depuis l'application.
 
 **3. Commandes :**
 
@@ -33,27 +33,27 @@
 
 **4. Configuration de l'application :**
 
-Configurer votre environnement Android Studio :
+## ⚙️ Configuration de l'application
 
-Téléchargez et installez Android Studio.
+### 1. Configurer votre environnement Android Studio
 
-Ouvrez le projet dans Android Studio.
+- Téléchargez et installez **[Android Studio](https://developer.android.com/studio)**.
+- Ouvrez le projet dans Android Studio.
 
-Lancer l'application :
+### 2. Lancer l'application
 
-Exécutez l'application sur votre appareil Android ou un émulateur.
+- Exécutez l'application sur votre appareil Android ou un émulateur.
+- L'application sera prête à envoyer des commandes une fois lancée.
 
-L'application sera prête à envoyer des commandes une fois lancée.
+### 3. Connecter à un réseau local
 
-Connecter à un réseau local :
+- Assurez-vous que votre smartphone est connecté à un réseau **Wi-Fi local**.
 
-Assurez-vous que votre smartphone est connecté à un réseau Wi-Fi local.
+### 4. Utilisation de l'interface
 
-Utilisation de l'interface :
+- L'application propose des boutons pour envoyer des commandes.
+- En appuyant sur les touches, les commandes sont envoyées au **PC via TCP/IP**.
 
-L'application propose des boutons pour envoyer des commandes.
-
-En appuyant sur les touches, les commandes sont envoyées au PC via TCP/IP.
 
 **3. OBJECTIF**
 
