@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var customCommandInput: EditText
     private lateinit var videoWebView: WebView
 
-    private val pcIp = "192.168.0.31"
+    private val pcIp = "192.168.5.2"
     private val pcPort = 12345
     private val base32Secret = "JBSWY3DPEHPK3PXP" // Clé à scanner dans Google Authenticator
 
@@ -29,12 +29,17 @@ class MainActivity : AppCompatActivity() {
         showOtpPrompt()
         setContentView(R.layout.activity_main)
 
+        // Initialisation UI
         statusTextView = findViewById(R.id.status)
         customCommandInput = findViewById(R.id.commandInput)
         videoWebView = findViewById(R.id.videoWebView)
-
         statusTextView.text = getString(R.string.txt_status_default)
 
+        setupVideoStream()
+        setupControls()
+    }
+
+    private fun setupVideoStream() {
         videoWebView.settings.loadWithOverviewMode = true
         videoWebView.settings.useWideViewPort = true
         videoWebView.webViewClient = object : WebViewClient() {
@@ -45,19 +50,21 @@ class MainActivity : AppCompatActivity() {
 
         val html = """
             <html><body style="margin:0;padding:0;">
-            <img src='http://192.168.0.31:8080' style='width:100%;height:auto;' />
+            <img src='http://192.168.5.2:8080' style='width:100%;height:auto;' />
             </body></html>
         """.trimIndent()
         videoWebView.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null)
+    }
 
-        // Contrôles directionnels
+    private fun setupControls() {
+        // Direction
         findViewById<Button>(R.id.up).setOnClickListener { sendCommand("E") }
         findViewById<Button>(R.id.down).setOnClickListener { sendCommand("e") }
         findViewById<Button>(R.id.left).setOnClickListener { sendCommand("b") }
         findViewById<Button>(R.id.right).setOnClickListener { sendCommand("B") }
         findViewById<Button>(R.id.stop).setOnClickListener { sendCommand("S") }
 
-        // Avant-bras et poignet
+        // Avant-bras / Poignet
         findViewById<Button>(R.id.avbUp).setOnClickListener { sendCommand("c") }
         findViewById<Button>(R.id.avbDown).setOnClickListener { sendCommand("C") }
         findViewById<Button>(R.id.wristUp).setOnClickListener { sendCommand("m") }
@@ -87,9 +94,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Programme automatique
+        // Séquence automatique
         findViewById<Button>(R.id.autoSequence).setOnClickListener {
-            val sequence = listOf("E", "E", "e", "e", "b", "b", "S", "c", "c", "C", "C", "r", "r", "R", "R", "o", "o", "O", "O", "m", "m", "M", "M", "B", "B", "I")
+            val sequence = listOf("E", "e", "b", "S", "c", "C", "r", "R", "o", "O", "m", "M", "B", "I")
             Thread {
                 runOnUiThread { statusTextView.text = getString(R.string.seq_running) }
                 for (cmd in sequence) {
@@ -147,8 +154,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    // ✅ Authentification TOTP manuelle (compatible Google Authenticator)
+    // ---------- Authentification TOTP ----------
     private fun showOtpPrompt() {
         val input = EditText(this)
         input.inputType = InputType.TYPE_CLASS_NUMBER
