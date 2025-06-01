@@ -16,20 +16,20 @@ Cette application permet de contrôler un bras robotique à distance en envoyant
 
 | **Action**                         | **Touche** |
 |-----------------------------------|------------|
-| Épaule ↓                          | E          |
-| Épaule ↑                          | e          |
-| Base ←                            | B          |
-| Base →                            | b          |
-| Coude ↑                           | C          |
-| Coude ↓                           | c          |
+| Épaule ↓                          | e          |
+| Épaule ↑                          | E          |
+| Base ←                            | b          |
+| Base →                            | B          |
+| Coude ↑                           | c          |
+| Coude ↓                           | C          |
 | Pince ← (Rotation gauche)         | r          |
 | Pince → (Rotation droite)         | R          |
 | Robot réinitialisé                | I          |
 | Arrêt de la machine               | S          |
 | Pince fermée                      | o          |
 | Pince ouverte                     | O          |
-| Poignet Haut                      | m          |
-| Poignet Bas                       | M          |
+| Poignet Haut                      | M          |
+| Poignet Bas                       | m          |
 
 **4. Configuration de l'application**
 
