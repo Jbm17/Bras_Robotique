@@ -35,23 +35,23 @@
 **4. Configuration de l'application**
 Configurer l’environnement Qt
 
-Installer Qt et Qt Creator
+1.Installer Qt et Qt Creator
 
 Ouvrir le projet fourni dans Qt Creator
 
-Lancer l’application PC
+2.Lancer l’application PC
 
 Exécuter sur un ordinateur connecté au robot
 
 L’interface est prête à recevoir et envoyer des commandes
 
-Charger les fichiers nécessaires
+3.Charger les fichiers nécessaires
 
 Télécharger et exécuter les fichiers source fournis (.cpp, .ui, etc.)
 
 S'assurer que la communication série fonctionne (Arduino connecté en USB)
 
-Utilisation de l’interface Qt
+4.Utilisation de l’interface Qt
 
 Commandes manuelles par boutons ou raccourcis clavier
 
