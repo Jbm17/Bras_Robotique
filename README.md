@@ -12,12 +12,12 @@
 
 | **Action**                         | **Touche** |
 |-----------------------------------|------------|
-| Épaule ↓                          | E          |
-| Épaule ↑                          | e          |
-| Base ←                            | B          |
-| Base →                            | b          |
-| Coude ↑                           | C          |
-| Coude ↓                           | c          |
+| Épaule ↓                          | e          |
+| Épaule ↑                          | E          |
+| Base ←                            | b          |
+| Base →                            | B          |
+| Coude ↑                           | c          |
+| Coude ↓                           | C          |
 | Pince ← (Rotation gauche)         | r          |
 | Pince → (Rotation droite)         | R          |
 | Robot réinitialisé                | I          |
