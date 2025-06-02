@@ -24,8 +24,8 @@
 | Arrêt de la machine               | S          |
 | Pince fermée                      | o          |
 | Pince ouverte                     | O          |
-| Poignet Haut                      | m          |
-| Poignet Bas                       | M          |
+| Poignet Haut                      | M          |
+| Poignet Bas                       | m          |
 
 **3. OBJECTIF**
 
