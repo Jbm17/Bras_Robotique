@@ -33,14 +33,28 @@
 
 
 **4. Configuration de l'application**
-1. Configurer votre environnement QT
-Téléchargez et installez QTStudio.
-Ouvrez le projet dans Android Studio.
-2. Lancer l'application
-Exécutez l'application sur votre appareil ordinateur.
-L'application sera prête à envoyer des commandes une fois lancée.
-3. Télécharger mon dossier avec les codes
-Assurez-vous que votre ordinateur lance bien les programme.
-5. Utilisation de l'interface
-L'application propose des boutons pour envoyer des commandes.
-En appuyant sur les touches, les commandes sont envoyées à l'aduino.
+Configurer l’environnement Qt
+
+Installer Qt et Qt Creator
+
+Ouvrir le projet fourni dans Qt Creator
+
+Lancer l’application PC
+
+Exécuter sur un ordinateur connecté au robot
+
+L’interface est prête à recevoir et envoyer des commandes
+
+Charger les fichiers nécessaires
+
+Télécharger et exécuter les fichiers source fournis (.cpp, .ui, etc.)
+
+S'assurer que la communication série fonctionne (Arduino connecté en USB)
+
+Utilisation de l’interface Qt
+
+Commandes manuelles par boutons ou raccourcis clavier
+
+Les actions sont envoyées directement à la carte Arduino
+
+
