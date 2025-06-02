@@ -32,7 +32,7 @@
   ``Ce programme en C++ permet d'avoir une interface utilisable sur QT afin de piloter le robot par USB et d'avoir une caméra fonctionelle afin de voir les mouvement du robot.``
 
 
-4. Configuration de l'application
+**4. Configuration de l'application**
 1. Configurer votre environnement QT
 Téléchargez et installez QTStudio.
 Ouvrez le projet dans Android Studio.
